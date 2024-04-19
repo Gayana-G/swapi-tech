@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
           detailsContainer.style.display = "none"; // Initially hide details
   
           // Populate details container with information
-          // Assuming your data has some properties like "name", "description", etc.
           const name = document.createElement("p");
           name.textContent = "Name: " + film.properties.title;
           detailsContainer.appendChild(name);
