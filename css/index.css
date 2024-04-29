@@ -1,6 +1,7 @@
 body {
   font-family:fantasy;
-  background-color: #f0f0f0;
+  background-color: #cbd5bc;
+  text-align: center;
 }
 
 h1 {
@@ -11,6 +12,56 @@ h1 {
   font-style: italic;
 }
 
-#options-list {
+#options-list, #films-list {
   font-style:italic;
+  font-size: large;
+  justify-content: center;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+/* Apply shared styles to both .button-like and .film */
+.button-like, .film, .details {
+  display: block; /* Change display to block */
+  margin-bottom: 10px; /* Add space between elements */
+  padding: 10px 20px;
+  background-color: #7c9e78;
+  color: #060606;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button-like:hover, .film:hover, .details:hover {
+  background-color: #15c721; /* Change background color on hover */
+  font-size:larger;
+}
+
+
+/* films */
+.film {
+  display: block; /* Display as block-level element */
+  margin-bottom: 10px; /* Add space between elements */
+}
+
+.details{
+  display: block;
+  width: 700px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+  }
+
 }
