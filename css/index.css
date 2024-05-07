@@ -4,6 +4,17 @@ body {
   text-align: center;
 }
 
+img {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Move the image below other content */
+  object-fit: cover; /* Cover the entire space with the image */
+  opacity: 0.5; /* Adjust image opacity as needed */
+}
+
 h1 {
   margin: 0;
   font-size: 100px;
@@ -12,17 +23,18 @@ h1 {
   font-style: italic;
 }
 
-#options-list, #films-list {
+#options-list, #films-list, #people-list, .under-header{
   font-style:italic;
-  font-size: large;
+  font-size: 40px;
   justify-content: center;
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: center; /* Center children horizontally */
+  height:min-content;
 }
 
 /* Apply shared styles to both .button-like and .film */
-.button-like, .film, .details {
+.option, .film, .person {
   display: block; /* Change display to block */
   margin-bottom: 10px; /* Add space between elements */
   padding: 10px 20px;
@@ -32,26 +44,37 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 300px;
+  width: 50%;
   text-align: center;
   box-sizing: border-box;
 }
+/* Apply styles to the anchor elements */
+.button-like{
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  cursor: pointer; /* Show pointer cursor on hover */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
 
-.button-like:hover, .film:hover, .details:hover {
-  background-color: #15c721; /* Change background color on hover */
+
+.option:hover, .film:hover, .person:hover {
+  background-color: #508d54; /* Change background color on hover */
   font-size:larger;
 }
 
 
 /* films */
-.film {
+.film, .person {
   display: block; /* Display as block-level element */
   margin-bottom: 10px; /* Add space between elements */
 }
 
 .details{
   display: block;
-  width: 700px;
+  width: 100%;
   text-align: center;
 }
 

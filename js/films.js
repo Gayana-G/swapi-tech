@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const films = data.result;
 
       films.forEach((film) => {
-        const pEl = document.createElement("p");
+        const pEl = document.createElement("div");
         pEl.classList.add("film");
 
-        const toggleBtn = document.createElement("p");
+        const toggleBtn = document.createElement("div");
         toggleBtn.textContent = film.description + " episode " + film.properties.episode_id;
         pEl.appendChild(toggleBtn);
 
@@ -80,8 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggleBtn.addEventListener("click", () => {
           const detailsContainer = pEl.querySelector(".details");
+
           detailsContainer.style.display =
             detailsContainer.style.display === "none" ? "block" : "none";
+
+          if (detailsContainer.style.display === "block") {
+            pEl.style.width = "100%";
+          } else {
+            pEl.style.width = "50%"; // Default width
+          }
         });
       });
     })
