@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         pEl.classList.add("film");
 
         const toggleBtn = document.createElement("div");
-        toggleBtn.textContent = film.description + " episode " + film.properties.episode_id;
+        toggleBtn.textContent =
+          film.description + " episode " + film.properties.episode_id;
         pEl.appendChild(toggleBtn);
 
         const detailsContainer = document.createElement("div");
@@ -26,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Description: " + film.properties.opening_crawl;
 
         const charactersToggle = document.createElement("span");
-        charactersToggle.textContent = "Characters (click here to see the list)";
+        charactersToggle.textContent =
+          "Characters (click here to see the list)";
         charactersToggle.classList.add("characters-toggle");
         charactersToggle.addEventListener("click", () => {
           const charactersList = detailsContainer.querySelector(".characters");
@@ -59,10 +61,12 @@ document.addEventListener("DOMContentLoaded", function () {
               detailsContainer.dataset.charactersLoaded = true;
             }
             charactersList.style.display = "block";
-            charactersToggle.textContent = "Characters (click here to hide the list)";
+            charactersToggle.textContent =
+              "Characters (click here to hide the list)";
           } else {
             charactersList.style.display = "none";
-            charactersToggle.textContent = "Characters (click here to see the list)";
+            charactersToggle.textContent =
+              "Characters (click here to see the list)";
           }
         });
 
@@ -87,7 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
           if (detailsContainer.style.display === "block") {
             pEl.style.width = "100%";
           } else {
-            pEl.style.width = "50%"; // Default width
+            if (window.innerWidth <= 1023) {
+              // Apply width adjustments for tab and mobile devices
+              pEl.style.width = "100%";
+            } else {
+              pEl.style.width = "50%";
+            }
           }
         });
       });

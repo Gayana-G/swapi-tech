@@ -72,9 +72,9 @@ h1 {
   margin-bottom: 10px; /* Add space between elements */
 } 
 
-.person, .details{
+.film, .person{
   display: block;
-  width: 100%;
+  width: 50%;
   text-align: center;
 }
 
@@ -95,6 +95,11 @@ h1 {
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     height:min-content;
+  }
+  .film, .person, .details{
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
 }
