@@ -87,4 +87,14 @@ h1 {
     font-style: italic;
   }
 
+  #options-list, #films-list, #people-list, .under-header{
+    font-style:italic;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    height:min-content;
+  }
+
 }

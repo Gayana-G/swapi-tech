@@ -24,7 +24,7 @@ It includes simple HTML, CSS, and JavaScript files.
 ## CONTENT:
 - [ ] Display the data for at least 2 of the models/data points in the API
 - [ ] Include navigation from each model’s page to the other models that are displayed. This means your site should have at least two clickable navigation links. When the user clicks each link you can either route them to a different HTML file that displays the data you get from your API call, or you can re-render your single HTML page to update with the new data.
-- [] Issue new GET requests for the linked data to display in the linked pages. You should be using two separate GET requests for each of the two data points so when the user clicks a navigation button it triggers the GET request for that data.
+- [ ] Issue new GET requests for the linked data to display in the linked pages. You should be using two separate GET requests for each of the two data points so when the user clicks a navigation button it triggers the GET request for that data.
 
 ## FUNCTIONALITY:
 - [ ] Code runs without issues by following the instructions in the README file
