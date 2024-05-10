@@ -70,9 +70,9 @@ h1 {
 .film, .person {
   display: block; /* Display as block-level element */
   margin-bottom: 10px; /* Add space between elements */
-}
+} 
 
-.details{
+.person, .details{
   display: block;
   width: 100%;
   text-align: center;

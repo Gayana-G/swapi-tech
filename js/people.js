@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const detailsContainer = document.createElement("div");
           detailsContainer.classList.add("details");
   
-          const toggleBtn = document.createElement("h2");
+          const toggleBtn = document.createElement("div");
           toggleBtn.textContent = person.uid + ". " + person.name;
   
           toggleBtn.addEventListener("click", () => {
@@ -51,8 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 .catch((err) => console.error(err)); // Log any fetch errors
   
               personDetails.style.display = "block";
+              pEl.style.width = "100%";
             } else {
               personDetails.style.display = "none";
+              pEl.style.width = "50%";
             }
           });
   
